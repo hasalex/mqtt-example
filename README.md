@@ -12,9 +12,11 @@ You can see the content of your topic with the HTTP bridge at http://eclipse.mqt
 With a Moquette server
 ================
 
-Run
+Run the Moquette server with the script moquette-broker.sh :
 
-Access locally
+    ./src/scripts/moquette-broker.sh
+
+Access locally (Settings)
 
     public static final String SERVER_URL = "tcp://localhost:1883";
 
