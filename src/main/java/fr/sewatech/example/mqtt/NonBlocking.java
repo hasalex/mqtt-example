@@ -2,6 +2,8 @@ package fr.sewatech.example.mqtt;
 
 import org.eclipse.paho.client.mqttv3.*;
 
+import static fr.sewatech.example.mqtt.Settings.SERVER_URL;
+
 /**
  * @author Alexis Hassler
  */
@@ -12,7 +14,7 @@ public class NonBlocking {
     }
 
     private static void receive() throws MqttException {
-        final MqttAsyncClient client = new MqttAsyncClient("tcp://localhost:1883", "C2");
+        final MqttAsyncClient client = new MqttAsyncClient(SERVER_URL, "C2");
         client.setCallback(new MqttCallback() {
             @Override
             public void connectionLost(Throwable throwable) {
@@ -50,7 +52,7 @@ public class NonBlocking {
     }
 
     private static void publish() throws MqttException {
-        MqttClient client = new MqttClient("tcp://localhost:1883", "C1", null); // null for no client-side persistence
+        MqttClient client = new MqttClient(SERVER_URL, "C1", null); // null for no client-side persistence
         client.connect();
         MqttTopic topic = client.getTopic("sample");
         MqttMessage message = new MqttMessage();

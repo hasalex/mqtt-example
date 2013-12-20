@@ -2,6 +2,8 @@ package fr.sewatech.example.mqtt;
 
 import org.eclipse.paho.client.mqttv3.*;
 
+import static fr.sewatech.example.mqtt.Settings.SERVER_URL;
+
 /**
  * @author Alexis Hassler
  */
@@ -12,7 +14,7 @@ public class Blocking {
     }
 
     private static void receive() throws MqttException {
-        final MqttClient client = new MqttClient("tcp://localhost:1883", "C2");
+        final MqttClient client = new MqttClient(SERVER_URL, "C2");
         client.connect();
         client.setCallback(new MqttCallback() {
             @Override
@@ -38,7 +40,7 @@ public class Blocking {
     }
 
     private static void publish() throws MqttException {
-        MqttClient client = new MqttClient("tcp://localhost:1883", "C1");
+        MqttClient client = new MqttClient(SERVER_URL, "C1");
         client.connect();
         MqttTopic topic = client.getTopic("sample");
         MqttMessage message = new MqttMessage();
