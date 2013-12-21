@@ -16,7 +16,7 @@ Run the Moquette server with the script moquette-broker.sh :
 
     ./src/scripts/moquette-broker.sh
 
-Access locally (Settings)
+Access locally (Settings) :
 
     public static final String SERVER_URL = "tcp://localhost:1883";
 
@@ -24,13 +24,15 @@ Access locally (Settings)
 With an ActiveMQ server
 ================
 
-Run
-TODO
+Run the ActiveMQ broker with the script activemq-broker.sh :
 
-Access locally
+    ./src/scripts/activemq-broker.sh
+
+MQTT is activated by defaut in version 5.9, but it looks like messages aren't retained.
+
+Access locally (Settings) :
 
     public static final String SERVER_URL = "tcp://localhost:1883";
-
 
 With a TomEE server
 ================
@@ -38,7 +40,7 @@ With a TomEE server
 Run
 TODO
 
-Access locally
+Access locally (Settings) :
 
     public static final String SERVER_URL = "tcp://localhost:1883";
 
