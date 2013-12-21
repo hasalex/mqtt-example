@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>MQTT over websockets</title>
+    <link rel="stylesheet" type="text/css" href="css/sample.css">
+    <script src="js/mqttws31.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/sample.js"></script>
+</head>
+
+<body>
+<h1>MQTT over WebSocket example</h1>
+
+<div id="status" class="disconnected">Pending</div>
+
+<form id='mainform' action="#">
+    <label for="message">Message</label>
+    <input id="message" name="message" type="text" width="200"/>
+
+    <input id="submit" type="submit" value="publish"/>
+</form>
+
+<div id="messages">
+    <label for="messagelist">Messages received on topic sewatech</label>
+    <ul id="messagelist">
+    </ul>
+</div>
+
+</body>
+</html>

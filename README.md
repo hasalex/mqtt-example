@@ -53,14 +53,12 @@ Access locally (Settings) :
 The Client
 =========
 
-The repository shows two Java client APIs : Eclipse Paho and Fuse MQTT-client.
+The repository shows two Java client APIs : [Eclipse Paho][http://www.eclipse.org/paho/] and [Fuse MQTT-client][http://mqtt-client.fusesource.org/].
 
 Eclipse Paho
 -----------
 
 In the fr.sewatech.example.mqtt.paho package, with a blocking and a non-blocking examples.
-
-see http://www.eclipse.org/paho/
 
 MQTT-client
 -----------
@@ -69,4 +67,11 @@ In the fr.sewatech.example.mqtt.fuseclient package, with a blocking, a future an
 
 The Future class is not java.util.concurrent.Future, but an internal one.
 
-see http://mqtt-client.fusesource.org/
+Eclipse Paho (JavaScript)
+-----------
+
+Open the mqtt.html in a browser.
+
+Does not work with Moquette, as it doesn't support websocket (would need an additional Web Server).
+
+Example inspired by http://architects.dzone.com/articles/mqtt-over-websockets

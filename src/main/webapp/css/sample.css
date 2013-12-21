@@ -1,0 +1,42 @@
+li {
+    list-style: none;
+    background: #fff;
+    margin: 2px;
+    padding: 0;
+}
+ul {
+    background: #eef;
+    margin: 0;
+    padding: 0;
+}
+input {
+    width: 450px;
+}
+
+.disconnected {
+    background-color: #f88;
+}
+.connected {
+    background-color: #8f8;
+}
+
+#status {
+    width: 200px;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+#messages {
+    margin: 50px 0;
+}
+#messagelist {
+    background: #ffffff;
+    width: 600px;
+    height: 400px;
+    overflow-y: scroll;
+    border: darkgreen solid thin;
+}
+#submit {
+    width: 100px;
+}
