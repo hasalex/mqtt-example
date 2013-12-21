@@ -1,15 +1,14 @@
-package fr.sewatech.example.mqtt;
+package fr.sewatech.example.mqtt.paho;
 
+import fr.sewatech.example.mqtt.common.Settings;
 import org.eclipse.paho.client.mqttv3.*;
-
-import static fr.sewatech.example.mqtt.Settings.*;
 
 /**
  * @author Alexis Hassler
  */
 public class NonBlockingConsumer {
     public static void main(String[] args) throws MqttException {
-        final MqttAsyncClient client = new MqttAsyncClient(SERVER_URL, "NonBlocking2");
+        final MqttAsyncClient client = new MqttAsyncClient(Settings.SERVER_URL, "NonBlocking2");
         client.setCallback(new SubscriptionCallback() {
             @Override
             protected void postMessageArrived() throws MqttException {
@@ -23,7 +22,7 @@ public class NonBlockingConsumer {
             public void onSuccess(IMqttToken iMqttToken) {
                 try {
                     System.out.println("Yeah, " + client.getClientId() + " connected");
-                    client.subscribe(TOPIC_NAME, QOS_LEVEL);
+                    client.subscribe(Settings.TOPIC_NAME, Settings.QOS_LEVEL);
                 } catch (MqttException e) {
                     e.printStackTrace();
                 }

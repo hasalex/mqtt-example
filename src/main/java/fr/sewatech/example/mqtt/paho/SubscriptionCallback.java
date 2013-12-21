@@ -1,4 +1,4 @@
-package fr.sewatech.example.mqtt;
+package fr.sewatech.example.mqtt.paho;
 
 import org.eclipse.paho.client.mqttv3.*;
 

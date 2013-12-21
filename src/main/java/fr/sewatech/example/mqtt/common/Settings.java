@@ -1,4 +1,4 @@
-package fr.sewatech.example.mqtt;
+package fr.sewatech.example.mqtt.common;
 
 /**
  * @author Alexis Hassler

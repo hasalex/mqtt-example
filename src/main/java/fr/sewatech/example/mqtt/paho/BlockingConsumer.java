@@ -1,9 +1,7 @@
-package fr.sewatech.example.mqtt;
+package fr.sewatech.example.mqtt.paho;
 
+import fr.sewatech.example.mqtt.common.Settings;
 import org.eclipse.paho.client.mqttv3.*;
-
-import static fr.sewatech.example.mqtt.Settings.SERVER_URL;
-import static fr.sewatech.example.mqtt.Settings.TOPIC_NAME;
 
 /**
  * @author Alexis Hassler
@@ -11,7 +9,7 @@ import static fr.sewatech.example.mqtt.Settings.TOPIC_NAME;
 public class BlockingConsumer {
 
     public static void main(String[] args) throws MqttException {
-        final MqttClient client = new MqttClient(SERVER_URL, "Blocking2");
+        final MqttClient client = new MqttClient(Settings.SERVER_URL, "BlockingConsumer");
         client.connect();
         client.setCallback(new SubscriptionCallback() {
             @Override
@@ -20,7 +18,7 @@ public class BlockingConsumer {
                 client.close();
             }
         });
-        client.subscribe(TOPIC_NAME);
+        client.subscribe(Settings.TOPIC_NAME);
     }
 
 }

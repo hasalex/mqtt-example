@@ -14,6 +14,12 @@
             <artifactId>mqtt-client</artifactId>
             <version>0.4.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.fusesource.mqtt-client</groupId>
+            <artifactId>mqtt-client</artifactId>
+            <version>1.5</version>
+        </dependency>
     </dependencies>
 
     <repositories>
