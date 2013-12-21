@@ -37,10 +37,12 @@ Access locally (Settings) :
 With a TomEE server
 ================
 
-Run
-TODO
+Run the TomEE broker with the script tomee-broker.sh :
+
+    ./src/scripts/tomee-broker.sh
+
+Same behaviour than ActiveMQ, as TomEE 1.6 runs ActiveMQ 5.9.
 
 Access locally (Settings) :
 
     public static final String SERVER_URL = "tcp://localhost:1883";
-
