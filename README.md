@@ -53,7 +53,7 @@ Access locally (Settings) :
 The Client
 =========
 
-The repository shows two Java client APIs : [Eclipse Paho][http://www.eclipse.org/paho/] and [Fuse MQTT-client][http://mqtt-client.fusesource.org/].
+The repository shows two Java client APIs : [Eclipse Paho](http://www.eclipse.org/paho/) and [Fuse MQTT-client](http://mqtt-client.fusesource.org/).
 
 Eclipse Paho
 -----------
