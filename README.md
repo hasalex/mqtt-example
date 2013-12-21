@@ -1,7 +1,10 @@
+The Broker
+=========
+
 Before you can launch the example, you need a MQTT server.
 
 With the M2M Eclipse sandbox server
-================
+-------------
 
 Nothing to start locally, but you'll have to check the value of the Setting.SERVER_URL constant to :
 
@@ -10,7 +13,7 @@ Nothing to start locally, but you'll have to check the value of the Setting.SERV
 You can see the content of your topic with the HTTP bridge at http://eclipse.mqttbridge.com/sewatech
 
 With a Moquette server
-================
+-------------
 
 Run the Moquette server with the script moquette-broker.sh :
 
@@ -22,7 +25,7 @@ Access locally (Settings) :
 
 
 With an ActiveMQ server
-================
+-------------
 
 Run the ActiveMQ broker with the script activemq-broker.sh :
 
@@ -35,7 +38,7 @@ Access locally (Settings) :
     public static final String SERVER_URL = "tcp://localhost:1883";
 
 With a TomEE server
-================
+-------------
 
 Run the TomEE broker with the script tomee-broker.sh :
 
@@ -46,3 +49,24 @@ Same behaviour than ActiveMQ, as TomEE 1.6 runs ActiveMQ 5.9.
 Access locally (Settings) :
 
     public static final String SERVER_URL = "tcp://localhost:1883";
+
+The Client
+=========
+
+The repository shows two Java client APIs : Eclipse Paho and Fuse MQTT-client.
+
+Eclipse Paho
+-----------
+
+In the fr.sewatech.example.mqtt.paho package, with a blocking and a non-blocking examples.
+
+see http://www.eclipse.org/paho/
+
+MQTT-client
+-----------
+
+In the fr.sewatech.example.mqtt.fuseclient package, with a blocking, a future and a callback examples.
+
+The Future class is not java.util.concurrent.Future, but an internal one.
+
+see http://mqtt-client.fusesource.org/

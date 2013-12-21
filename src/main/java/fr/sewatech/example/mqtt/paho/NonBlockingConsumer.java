@@ -8,7 +8,7 @@ import org.eclipse.paho.client.mqttv3.*;
  */
 public class NonBlockingConsumer {
     public static void main(String[] args) throws MqttException {
-        final MqttAsyncClient client = new MqttAsyncClient(Settings.SERVER_URL, "NonBlocking2");
+        final MqttAsyncClient client = new MqttAsyncClient(Settings.SERVER_URL, "NonBlockingConsumer");
         client.setCallback(new SubscriptionCallback() {
             @Override
             protected void postMessageArrived() throws MqttException {

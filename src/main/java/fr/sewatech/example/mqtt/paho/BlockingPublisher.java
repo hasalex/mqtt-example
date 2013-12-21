@@ -17,7 +17,7 @@ public class BlockingPublisher {
 
         MqttTopic topic = client.getTopic(Settings.TOPIC_NAME);
         MqttMessage message = new MqttMessage();
-        message.setPayload("Hello from Paho".getBytes());
+        message.setPayload("Hello from the Paho blocking client".getBytes());
         message.setRetained(true);
         topic.publish(message);
         System.out.println("Publishing succeeded");

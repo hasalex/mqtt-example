@@ -17,11 +17,11 @@ public class BlockingConsumer {
 
         connection.subscribe(new Topic[]{new Topic(Settings.TOPIC_NAME, QoS.AT_MOST_ONCE)});
 
-        Message message = connection.receive();
-        System.out.println("Hey, message arrived on topic " + message.getTopic() + " : " + new String(message.getPayload(), "UTF-8"));
-        message.ack();
-
-        connection.disconnect();
+        while (true) {
+            Message message = connection.receive();
+            System.out.println("Hey, message arrived on topic " + message.getTopic() + " : " + new String(message.getPayload(), "UTF-8"));
+            message.ack();
+        }
     }
 
 }
