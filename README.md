@@ -44,6 +44,10 @@ Run the TomEE broker with the script tomee-broker.sh :
 
     ./src/scripts/tomee-broker.sh
 
+As an alternative, you may run TomEE from maven :
+
+    mvn tomee:run
+
 Same behaviour than ActiveMQ, as TomEE 1.6 runs ActiveMQ 5.9.
 
 Access locally (Settings) :
