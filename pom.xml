@@ -21,6 +21,10 @@
             <version>1.5</version>
         </dependency>
     </dependencies>
+    <properties>
+        <jetty.version>7.6.9.v20130131</jetty.version>
+        <activemq.version>5.9.0</activemq.version>
+    </properties>
 
     <repositories>
         <repository>
@@ -40,10 +44,42 @@
                     <tomeeVersion>1.6.0</tomeeVersion>
                     <tomeeClassifier>plus</tomeeClassifier>
                     <libs>
-                        <lib>org.apache.activemq:activemq-mqtt:5.9.0</lib>
+                        <lib>org.apache.activemq:activemq-mqtt:${activemq.version}</lib>
                         <lib>org.fusesource.mqtt-client:mqtt-client:1.5</lib>
                     </libs>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.activemq.tooling</groupId>
+                <artifactId>activemq-maven-plugin</artifactId>
+                <version>${activemq.version}</version>
+                <configuration>
+                    <configUri>broker:(mqtt://localhost:1883,ws://localhost:61614)?useJmx=false&amp;persistent=false</configUri>
+                    <fork>false</fork>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.fusesource.mqtt-client</groupId>
+                        <artifactId>mqtt-client</artifactId>
+                        <version>1.5</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.eclipse.jetty</groupId>
+                        <artifactId>jetty-server</artifactId>
+                        <version>${jetty.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.eclipse.jetty</groupId>
+                        <artifactId>jetty-servlet</artifactId>
+                        <version>${jetty.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.eclipse.jetty</groupId>
+                        <artifactId>jetty-websocket</artifactId>
+                        <version>${jetty.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>

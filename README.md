@@ -27,9 +27,9 @@ Access locally (Settings) :
 With an ActiveMQ server
 -------------
 
-Run the ActiveMQ broker with the script activemq-broker.sh :
+Run the ActiveMQ broker from maven :
 
-    ./src/scripts/activemq-broker.sh
+    mvn activemq:run
 
 MQTT is activated by defaut in version 5.9, but it looks like messages aren't retained.
 
@@ -40,11 +40,7 @@ Access locally (Settings) :
 With a TomEE server
 -------------
 
-Run the TomEE broker with the script tomee-broker.sh :
-
-    ./src/scripts/tomee-broker.sh
-
-As an alternative, you may run TomEE from maven :
+Run the TomEE broker from maven :
 
     mvn tomee:run
 
