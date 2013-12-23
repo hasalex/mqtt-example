@@ -46,6 +46,11 @@
                     <libs>
                         <lib>org.apache.activemq:activemq-mqtt:${activemq.version}</lib>
                         <lib>org.fusesource.mqtt-client:mqtt-client:1.5</lib>
+
+                        <lib>org.apache.activemq:activemq-http:${activemq.version}</lib>
+                        <lib>org.eclipse.jetty:jetty-server:${jetty.version}</lib>
+                        <lib>org.eclipse.jetty:jetty-servlet:${jetty.version}</lib>
+                        <lib>org.eclipse.jetty:jetty-websocket:${jetty.version}</lib>
                     </libs>
                 </configuration>
             </plugin>

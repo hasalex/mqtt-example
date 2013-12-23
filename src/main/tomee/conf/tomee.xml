@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tomee>
     <Resource id="MqttResourceAdapter" type="ActiveMQResourceAdapter">
-        BrokerXmlConfig =  broker:(mqtt://localhost:1883)
+        BrokerXmlConfig =  broker:(mqtt://localhost:1883,ws://localhost:61614)?useJmx=false&amp;persistent=false
     </Resource>	
 </tomee>

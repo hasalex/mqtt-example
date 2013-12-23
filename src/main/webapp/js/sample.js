@@ -35,7 +35,8 @@ $(document).ready(function() {
     }
 
     function onConnectionLost(responseObject) {
-        alert(client.clientId+"\n"+responseObject.errorCode);
+        $('#status').toggleClass('connected',false);
+        $('#status').text('Connection lost');
     }
 
     function onMessageArrived(message) {
